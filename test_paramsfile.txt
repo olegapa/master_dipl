@@ -1,0 +1,8 @@
+run fashionpedia generate cams
+./generate_cams.sh CLIP-ES/genetate_cams_fashionpedia.py input/datasets/Fashionpedia/train CLIP-ES/fashionpedia/train.txt
+
+run fashionpedia sam
+./run_sam.sh ../datasets/Fashionpedia/train
+
+run fashionpedia crf pseudo masks
+./crf_procces.sh ../datasets/Fashionpedia/train CLIP-ES/fashionpedia/train.txt
